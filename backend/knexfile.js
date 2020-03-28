@@ -13,6 +13,17 @@ module.exports = {
     useNullAsDefault: true
   },
 
+  teste: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/test.sqlite'
+    },
+    migrations: {
+      directory: './src/database/migrations' // npx knex migrate:make <table>
+    },
+    useNullAsDefault: true
+  },
+
   staging: {
     client: 'postgresql',
     connection: {
